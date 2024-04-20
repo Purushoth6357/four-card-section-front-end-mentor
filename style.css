@@ -1,0 +1,168 @@
+:root {
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+  --Very-Dark-Blue: hsl(234, 12%, 34%);
+  --Grayish-Blue: hsl(229, 6%, 66%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+
+  --fw-light: 200;
+  --fw-regular: 400;
+  --fw-bold: 600;
+
+  --ff-base: "Poppins", sans-serif;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* general styling */
+
+body {
+  color: var(--Very-Dark-Blue);
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
+  font-size: 1rem;
+
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  margin: 4rem 1.5rem;
+}
+
+.four__card {
+  width: 100%;
+  max-width: 1000px;
+}
+
+.content__title {
+  text-align: center;
+}
+
+.title {
+  font-weight: var(--fw-light);
+}
+
+.content__title p {
+  margin-top: 1rem;
+}
+
+.cards {
+  margin-top: 2rem;
+  display: grid;
+  gap: 2rem;
+}
+
+@media screen and (min-width: 600px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .karma {
+    grid-column-start: 2;
+  }
+
+  .card:nth-child(1) {
+    transform: translateY(52%);
+  }
+
+  .card:nth-child(4) {
+    transform: translateY(-60%);
+  }
+}
+
+.card {
+  background-color: var(--Very-Light-Gray);
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 10px #888888;
+  padding: 1rem;
+  position: relative;
+}
+
+.icons {
+  margin-top: 0.5rem;
+  float: right;
+}
+
+.card p {
+  line-height: 1.5;
+}
+
+.bold {
+  color: var(--Very-Dark-Blue);
+  font-weight: var(--fw-bold);
+}
+
+p {
+  color: var(--Grayish-Blue);
+}
+
+.supervisor {
+  border-top: 0.5rem solid var(--Cyan);
+}
+
+.team {
+  border-top: 0.5rem solid var(--Red);
+}
+
+.karma {
+  border-top: 0.5rem solid var(--Orange);
+}
+
+.calculator {
+  border-top: 0.5rem solid var(--Blue);
+}
